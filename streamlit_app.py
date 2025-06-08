@@ -24,6 +24,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 pd_df = pd.DataFrame(my_dataframe.to_pandas())
 st.dataframe(pd_df)
+st.text(pd_df.columns)
 st.stop()
 
 ingredients_list = st.multiselect(
